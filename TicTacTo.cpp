@@ -108,7 +108,7 @@ bool functionthree(){
     {
         for (int j = 0; j < 3; j++)
         {
-            if(places[i][j] !='X'&&places[i][j]!='0'){
+            if(places[i][j] !='X'||places[i][j]!='0'){
                 return false;
             }
         }
@@ -132,7 +132,7 @@ int main(){
         funtionone();
         functiontwo();
         functionthree();
-         system("CLS");
+        system("CLS");
 
     }
     funtionone();
