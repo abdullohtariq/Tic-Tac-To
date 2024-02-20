@@ -6,11 +6,12 @@ using namespace std;
     int row;
     int column;
     char tokken='X';
-    bool tie=false;
+    int digit=0;
+    bool tieCheck = false;
     string p1=" ";
     string p2=" ";
 
-void funtionone(){
+void printGame(){
     
     cout<<"     |       |     "<<endl;
     cout<<"  "<<places[0][0]<<"  |   "<<places[0][1]<<"   |  "<<places[0][2]<<"  "<<endl;
@@ -23,14 +24,14 @@ void funtionone(){
     cout<<"     |       |     "<<endl;
 
     }
-void functiontwo(){
-    int digit;
+void inputGame(){
+    
     if (tokken=='X')
     {
         cout<<p1<<" enter the number of spot: ";
         cin>>digit;
     }
-    if (tokken=='0')
+    if (tokken=='O')
     {
         cout<<p2<<" enter the number of spot: ";
         cin>>digit;
@@ -70,76 +71,85 @@ void functiontwo(){
      if(digit==9){
         row=2;
         column=2;
-    }else if(digit<1 || digit > 9){
+    }if(digit<1 || digit > 9){
         cout<<"The Number Is Not On Chart!!!"<<endl;
     }
 
-//Condition to Check Wether the place is empty then filling it and then changing sign for nect person.
+//Condition to Check Wether the place is empty then filling it and then changing sign for next person.
 
-    if(tokken=='X' && places[row][column] != 'X' && places[row][column] !='0'){
+    if(tokken=='X' && places[row][column] != 'X' && places[row][column] !='O'){
         places[row][column]='X';
-        tokken='0';
+        tokken='O';
     }
-    else if(tokken=='0' && places[row][column] != 'X' && places[row][column] !='0'){
-        places[row][column]='0';
+    else if(tokken=='O' && places[row][column] != 'X' && places[row][column] !='O'){
+        places[row][column]='O';
         tokken='X';
-    }else{
-        cout<<"There is No Empty Space"<<endl;
-        functiontwo();
-        funtionone();
+    }else if((tokken=='X' || tokken=='O')&&(places[row][column] == 'X' || places[row][column] =='O')) {
+        cout<<"The place is already takken: "<<endl;
+        inputGame();
+        printGame();
     }
     
 }
 
-//Check Wether a player have won the game or not.
 
-bool functionthree(){
+bool checkWinner(){
     for (int i = 0; i < 3; i++)
     {
-        if(places[i][0]==places[i][1] &&places[i][0]==places[i][2] || places[0][i]==places[1][i]&&places[0][i]==places[2][i]){
+        if(places[i][0]==places[i][1] &&places[i][0]==places[i][2]){
             return true;
         }
+        else if(places[0][i]==places[1][i]&&places[0][i]==places[2][i]){
+        	return true;
+		}
     }
-    if(places[0][0]==places[1][1] && places[0][0]==places[2][2] || places[0][2]==places[1][1] && places[0][2]==places[2][0]){
+    if(places[0][0]==places[1][1] && places[0][0]==places[2][2]){
         return true;
     }
-//check wether the game is ended:
+    else if( places[0][2]==places[1][1] && places[0][2]==places[2][0]){
+    	return true;
+	}
+
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
-            if(places[i][j] !='X'||places[i][j]!='0'){
+            if(places[i][j] !='X'&& places[i][j]!='O'){
+            	cout<<"The Game is Not Over"<<endl<<endl;
                 return false;
+            
+            }
             }
         }
+	tieCheck=true;
+    return true;
         
     }
-//check wether the game is draw:
-    tie=true;
-    return false;
+    
 
-}
+
+
 int main(){
 
-    cout<<"What is Name Of Player One: \n";
+    cout<<"What is Name Of Player One(Only First Name): \n";
     cin>>p1;
-    cout<<"What is Name Of Player Two: \n";
+    cout<<"What is Name Of Player Two(Only First Name): \n";
     cin>>p2;
     cout<<endl<<p1<<" Is Player One. He will have the First Turn"<<endl;
     cout<<endl<<p2<<" Is Player Two. He will have the Second Turn"<<endl;
 
-    while(!functionthree()){
-        funtionone();
-        functiontwo();
-        functionthree();
+    while(!checkWinner()){
+        printGame();
+        inputGame();
+        checkWinner();
         system("CLS");
 
     }
-    funtionone();
-    if(tokken=='X' && tie==false){
+    printGame();
+    if(tokken=='X' && tieCheck==false){
         cout<<p2<<" Wins!!"<<endl;
     }
-    else if(tokken=='0' && tie==false){
+    else if(tokken=='O' && tieCheck==false){
         cout<<p1<<" Wins!!"<<endl;
     }else{
         cout<<"The game Is Draw!!"<<endl;
