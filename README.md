@@ -1,6 +1,7 @@
 This is my first coding project.<br>
 I Made this tic tac to Game using C++, and it runs on CLI.<br>
 
-Now i have Got an idea 💡 <br>
+Idea 💡 <br>
 i will add a feature in game so u can <br>
-play it with computer.
+Play it with computer.<br>
+That Feature Will Not Be In Main Brach Untill I fully Finalize it.
