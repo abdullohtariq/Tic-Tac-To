@@ -1,5 +1,13 @@
+Introduction🗣: 
+
+
 This is my first coding project.<br>
 I Made this tic tac to Game using C++, and it runs on CLI.<br>
+The Game is currently a two player game.<br>
+
+
+Future Ideas: 
+
 
 Idea 💡 1 <br>
 i will add a feature in game so u can <br>
