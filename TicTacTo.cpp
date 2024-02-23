@@ -71,8 +71,14 @@ void inputGame(){
      if(digit==9){
         row=2;
         column=2;
-    }if(digit<1 || digit > 9){
+    }
+	if(digit<1 || digit > 9){
         cout<<"The Number Is Not On Chart!!!"<<endl;
+        digit=0;
+        cin.clear();
+        cin.ignore();
+        inputGame();
+        printGame();
     }
 
 //Condition to Check Wether the place is empty then filling it and then changing sign for next person.
