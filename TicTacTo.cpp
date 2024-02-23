@@ -15,15 +15,15 @@ void printGame(){
 	
 	cout<<endl<<endl;
     
-    cout<<"               |       |     "<<endl;
-    cout<<"            "<<places[0][0]<<"  |   "<<places[0][1]<<"   |  "<<places[0][2]<<"  "<<endl;
-    cout<<"          _____|_______|_____"<<endl;
-    cout<<"               |       |     "<<endl;
-    cout<<"            "<<places[1][0]<<"  |   "<<places[1][1]<<"   |  "<<places[1][2]<<"  "<<endl;
-    cout<<"          _____|_______|_____"<<endl;
-    cout<<"               |       |     "<<endl;
-    cout<<"            "<<places[2][0]<<"  |   "<<places[2][1]<<"   |  "<<places[2][2]<<"  "<<endl;
-    cout<<"               |       |     "<<endl;
+    cout<<"            |       |     "<<endl;
+    cout<<"         "<<places[0][0]<<"  |   "<<places[0][1]<<"   |  "<<places[0][2]<<"  "<<endl;
+    cout<<"       _____|_______|_____"<<endl;
+    cout<<"            |       |     "<<endl;
+    cout<<"         "<<places[1][0]<<"  |   "<<places[1][1]<<"   |  "<<places[1][2]<<"  "<<endl;
+    cout<<"       _____|_______|_____"<<endl;
+    cout<<"            |       |     "<<endl;
+    cout<<"         "<<places[2][0]<<"  |   "<<places[2][1]<<"   |  "<<places[2][2]<<"  "<<endl;
+    cout<<"            |       |     "<<endl;
 
     }
 void inputGame(){
