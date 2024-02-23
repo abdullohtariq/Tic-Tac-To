@@ -73,7 +73,7 @@ void inputGame(){
         column=2;
     }
 	if(digit<1 || digit > 9){
-        cout<<"The Number Is Not On Chart!!!"<<endl;
+        cout<<"The Number Is Not On Valid!!!"<<endl;
         digit=0;
         cin.clear();
         cin.ignore();
@@ -91,7 +91,7 @@ void inputGame(){
         places[row][column]='O';
         tokken='X';
     }else if((tokken=='X' || tokken=='O')&&(places[row][column] == 'X' || places[row][column] =='O')) {
-        cout<<"The place is already takken: "<<endl;
+        cout<<"The number is already takken. Try Another One: "<<endl;
         inputGame();
         printGame();
     }
@@ -121,7 +121,7 @@ bool checkWinner(){
         for (int j = 0; j < 3; j++)
         {
             if(places[i][j] !='X'&& places[i][j]!='O'){
-            	cout<<"The Game is Not Over"<<endl<<endl;
+            	cout<<"TIC TAC TOE"<<endl<<endl;
                 return false;
             
             }
