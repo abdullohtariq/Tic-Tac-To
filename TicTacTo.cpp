@@ -1,7 +1,6 @@
 #include<iostream>
 using namespace std;
 
-    //these are our universal variables
     char places[3][3]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
     int row;
     int column;
@@ -12,69 +11,79 @@ using namespace std;
     string p2=" ";
 
 void printGame(){
+	
+	cout<<endl<<endl;
     
-    cout<<"     |       |     "<<endl;
-    cout<<"  "<<places[0][0]<<"  |   "<<places[0][1]<<"   |  "<<places[0][2]<<"  "<<endl;
-    cout<<"_____|_______|_____"<<endl;
-    cout<<"     |       |     "<<endl;
-    cout<<"  "<<places[1][0]<<"  |   "<<places[1][1]<<"   |  "<<places[1][2]<<"  "<<endl;
-    cout<<"_____|_______|_____"<<endl;
-    cout<<"     |       |     "<<endl;
-    cout<<"  "<<places[2][0]<<"  |   "<<places[2][1]<<"   |  "<<places[2][2]<<"  "<<endl;
-    cout<<"     |       |     "<<endl;
+    cout<<"            |       |     "<<endl;
+    cout<<"         "<<places[0][0]<<"  |   "<<places[0][1]<<"   |  "<<places[0][2]<<"  "<<endl;
+    cout<<"       _____|_______|_____"<<endl;
+    cout<<"            |       |     "<<endl;
+    cout<<"         "<<places[1][0]<<"  |   "<<places[1][1]<<"   |  "<<places[1][2]<<"  "<<endl;
+    cout<<"       _____|_______|_____"<<endl;
+    cout<<"            |       |     "<<endl;
+    cout<<"         "<<places[2][0]<<"  |   "<<places[2][1]<<"   |  "<<places[2][2]<<"  "<<endl;
+    cout<<"            |       |     "<<endl;
 
     }
 void inputGame(){
     
     if (tokken=='X')
     {
-        cout<<p1<<" enter the number of spot: ";
+        cout<<endl<<p1<<" enter the number of spot: ";
         cin>>digit;
     }
     if (tokken=='O')
     {
-        cout<<p2<<" enter the number of spot: ";
+        cout<<endl<<p2<<" enter the number of spot: ";
         cin>>digit;
     }
-    if(digit==1){
+    switch (digit){
+    case 1:
         row=0;
         column=0;
-    }
-     if(digit==2){
+        break;
+    case 2:
         row=0;
         column=1;
-    }
-     if(digit==3){
+        break;
+    case 3:
         row=0;
         column=2;
-    }
-     if(digit==4){
+        break;
+    case 4:
         row=1;
         column=0;
-    }
-     if(digit==5){
+        break;
+    case 5:
         row=1;
         column=1;
-    }
-     if(digit==6){
+        break;
+    case 6:
         row=1;
         column=2;
-    }
-     if(digit==7){
+        break;
+    case 7:
         row=2;
         column=0;
-    }
-     if(digit==8){
+        break;
+    case 8:
         row=2;
         column=1;
-    }
-     if(digit==9){
+        break;
+    case 9:
         row=2;
         column=2;
-    }if(digit<1 || digit > 9){
-        cout<<"The Number Is Not On Chart!!!"<<endl;
+        break;
+    
+    default:
+        cout<<"The Number Is Not On Valid!!!"<<endl;
+        digit=0;
+        cin.clear();
+        cin.ignore();
+        inputGame();
+        printGame();
+        break;
     }
-
 //Condition to Check Wether the place is empty then filling it and then changing sign for next person.
 
     if(tokken=='X' && places[row][column] != 'X' && places[row][column] !='O'){
@@ -85,7 +94,7 @@ void inputGame(){
         places[row][column]='O';
         tokken='X';
     }else if((tokken=='X' || tokken=='O')&&(places[row][column] == 'X' || places[row][column] =='O')) {
-        cout<<"The place is already takken: "<<endl;
+        cout<<"The number is already takken. Try Another One: "<<endl;
         inputGame();
         printGame();
     }
@@ -115,7 +124,7 @@ bool checkWinner(){
         for (int j = 0; j < 3; j++)
         {
             if(places[i][j] !='X'&& places[i][j]!='O'){
-            	cout<<"The Game is Not Over"<<endl<<endl;
+            	cout<<"TIC TAC TOE"<<endl<<endl;
                 return false;
             
             }
@@ -137,6 +146,7 @@ int main(){
     cin>>p2;
     cout<<endl<<p1<<" Is Player One. He will have the First Turn"<<endl;
     cout<<endl<<p2<<" Is Player Two. He will have the Second Turn"<<endl;
+    system("CLS");
 
     while(!checkWinner()){
         printGame();
@@ -147,11 +157,12 @@ int main(){
     }
     printGame();
     if(tokken=='X' && tieCheck==false){
-        cout<<p2<<" Wins!!"<<endl;
+        cout<<endl<<p2<<" Win!!"<<endl;
     }
     else if(tokken=='O' && tieCheck==false){
-        cout<<p1<<" Wins!!"<<endl;
+        cout<<endl<<p1<<" Win!!"<<endl;
     }else{
-        cout<<"The game Is Draw!!"<<endl;
+        cout<<"The game Is Draw!!!!!!"<<endl;
     }
+    cout<<endl<<"THANKS FOR PLAYING......."<<endl;
 }
