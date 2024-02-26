@@ -1,11 +1,15 @@
 #include<iostream>
 using namespace std;
+#include <cstdlib>
+#include<time.h>
+
 
     char places[3][3]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
     int row;
     int column;
     char tokken='X';
     int digit=0;
+    int gameMode=0;
     bool tieCheck = false;
     string p1=" ";
     string p2=" ";
@@ -32,10 +36,16 @@ void inputGame(){
         cout<<endl<<p1<<" enter the number of spot: ";
         cin>>digit;
     }
+    if(p2!="Computer"){
     if (tokken=='O')
     {
         cout<<endl<<p2<<" enter the number of spot: ";
         cin>>digit;
+    }
+    }else{
+        srand(time(0));
+        int randomNumber = 1 + (rand() % 9);
+        digit = randomNumber;
     }
     switch (digit){
     case 1:
@@ -139,11 +149,29 @@ bool checkWinner(){
 
 
 int main(){
+    cout<<"Press 1 to Play With a Computer."<<endl;
+    cout<<"Press 2 to play pass N pass: ";
+    cin>>gameMode;
+    switch (gameMode)
+    {
+    case 1:
+        p2="Computer";
+        break;
+    case 2:
+        p2=" ";
+        break;
+    
+    default:
+    cout<<"Invalid Input Try After Runing Game Again";
+    break;
+    }
 
     cout<<"What is Name Of Player One(Only First Name): \n";
     cin>>p1;
+    if(p2!="Computer"){
     cout<<"What is Name Of Player Two(Only First Name): \n";
     cin>>p2;
+    }
     cout<<endl<<p1<<" Is Player One. He will have the First Turn"<<endl;
     cout<<endl<<p2<<" Is Player Two. He will have the Second Turn"<<endl;
     system("CLS");
