@@ -1,7 +1,6 @@
 #include<iostream>
 using namespace std;
 
-    //these are our universal variables
     char places[3][3]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
     int row;
     int column;
@@ -38,51 +37,53 @@ void inputGame(){
         cout<<endl<<p2<<" enter the number of spot: ";
         cin>>digit;
     }
-    if(digit==1){
+    switch (digit){
+    case 1:
         row=0;
         column=0;
-    }
-     if(digit==2){
+        break;
+    case 2:
         row=0;
         column=1;
-    }
-     if(digit==3){
+        break;
+    case 3:
         row=0;
         column=2;
-    }
-     if(digit==4){
+        break;
+    case 4:
         row=1;
         column=0;
-    }
-     if(digit==5){
+        break;
+    case 5:
         row=1;
         column=1;
-    }
-     if(digit==6){
+        break;
+    case 6:
         row=1;
         column=2;
-    }
-     if(digit==7){
+        break;
+    case 7:
         row=2;
         column=0;
-    }
-     if(digit==8){
+        break;
+    case 8:
         row=2;
         column=1;
-    }
-     if(digit==9){
+        break;
+    case 9:
         row=2;
         column=2;
-    }
-	if(digit<1 || digit > 9){
+        break;
+    
+    default:
         cout<<"The Number Is Not On Valid!!!"<<endl;
         digit=0;
         cin.clear();
         cin.ignore();
         inputGame();
         printGame();
+        break;
     }
-
 //Condition to Check Wether the place is empty then filling it and then changing sign for next person.
 
     if(tokken=='X' && places[row][column] != 'X' && places[row][column] !='O'){
@@ -156,10 +157,10 @@ int main(){
     }
     printGame();
     if(tokken=='X' && tieCheck==false){
-        cout<<p2<<" Win!!"<<endl;
+        cout<<endl<<p2<<" Win!!"<<endl;
     }
     else if(tokken=='O' && tieCheck==false){
-        cout<<p1<<" Win!!"<<endl;
+        cout<<endl<<p1<<" Win!!"<<endl;
     }else{
         cout<<"The game Is Draw!!!!!!"<<endl;
     }
