@@ -1,0 +1,3 @@
+﻿  App.cpp
+C:\Users\B.s\source\repos\C++ Practice For Exams\Project1\TictacToe(GUI)\TicTacToGUI\App.cpp(6,2): error C2243: 'static_cast': conversion from 'wxAppConsole *' to 'App *' exists, but is inaccessible
+C:\Users\B.s\source\repos\C++ Practice For Exams\Project1\TictacToe(GUI)\TicTacToGUI\App.cpp(6,2): error C2243: 'type cast': conversion from 'App *' to 'wxAppConsole *' exists, but is inaccessible
