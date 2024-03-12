@@ -1,0 +1,7 @@
+﻿  Tic Tac Toe.cpp
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(59,25): error C3861: 'checkWinner': identifier not found
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(62,51): error C2039: 'to_string': is not a member of 'std'
+  C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\predefined C++ types (compiler internal)(348,11):
+  see declaration of 'std'
+  
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(62,51): error C3861: 'to_string': identifier not found
