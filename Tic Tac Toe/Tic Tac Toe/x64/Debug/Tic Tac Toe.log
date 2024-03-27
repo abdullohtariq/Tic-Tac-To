@@ -1,7 +1,29 @@
 ﻿  Tic Tac Toe.cpp
-C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(59,25): error C3861: 'checkWinner': identifier not found
-C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(62,51): error C2039: 'to_string': is not a member of 'std'
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(62,25): error C3861: 'checkWinner': identifier not found
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(62,47): error C3861: 'checkTie': identifier not found
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(72,23): error C2039: 'to_string': is not a member of 'std'
   C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\predefined C++ types (compiler internal)(348,11):
   see declaration of 'std'
   
-C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(62,51): error C3861: 'to_string': identifier not found
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(72,23): error C3861: 'to_string': identifier not found
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(76,13): error C3861: 'isButtonClicked': identifier not found
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(95,17): error C3861: 'checkWinner': identifier not found
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(97,43): error C2039: 'to_string': is not a member of 'std'
+  C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\predefined C++ types (compiler internal)(348,11):
+  see declaration of 'std'
+  
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(97,43): error C3861: 'to_string': identifier not found
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(102,13): error C2059: syntax error: '}'
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(112,10): error C2601: 'checkWinner': local function definitions are illegal
+  C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(10,1):
+  this line contains a '{' which has not yet been matched
+  
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(119,10): error C2601: 'checkTie': local function definitions are illegal
+  C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(10,1):
+  this line contains a '{' which has not yet been matched
+  
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(136,10): error C2601: 'isButtonClicked': local function definitions are illegal
+  C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(10,1):
+  this line contains a '{' which has not yet been matched
+  
+C:\Users\B.s\Documents\GitHub\Tic-Tac-To\Tic Tac Toe\Tic Tac Toe.cpp(10,1): error C1075: '{': no matching token found
